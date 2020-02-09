@@ -9,9 +9,13 @@
     "license": "MIT",
     "require": {
         "php": "^7.2",
+        "elibyy/tcpdf-laravel": "6.0.*",
         "fideloper/proxy": "^4.0",
+        "jorarmarfin/mipaquete": "dev-master",
+        "jorarmarfin/laravel_youtube": "dev-master",
         "laravel/framework": "^6.2",
-        "laravel/tinker": "^2.0"
+        "laravel/tinker": "^2.0",
+        "rap2hpoutre/laravel-log-viewer": "^1.3"
     },
     "require-dev": {
         "facade/ignition": "^1.4",
@@ -58,5 +62,15 @@
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
         ]
-    }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "packages/jorarmarfin/mipaquete"
+        },
+        {
+            "type": "path",
+            "url": "packages/jorarmarfin/laravel_youtube"
+        }
+    ]
 }
