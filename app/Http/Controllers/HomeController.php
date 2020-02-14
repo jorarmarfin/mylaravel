@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use MiPaquete;
 use LaravelYoutube;
+use LaravelDspace;
 
 class HomeController extends Controller
 {
@@ -14,5 +15,10 @@ class HomeController extends Controller
         dd($data->type);
         return $data;
         
+    }
+    public function dspace()
+    {
+        $data = LaravelDspace::index();
+        dd($data);
     }
 }

@@ -15,3 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('test', 'HomeController@index');
+Route::get('dspace', 'HomeController@dspace');
