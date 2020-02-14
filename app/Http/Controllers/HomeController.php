@@ -18,7 +18,7 @@ class HomeController extends Controller
     }
     public function dspace()
     {
-        $data = LaravelDspace::index();
+        $data = LaravelDspace::index(['verb'=>'ListRecords','set'=>'com_11283_320273','metadataPrefix'=>'etdms']);
         dd($data);
     }
 }
