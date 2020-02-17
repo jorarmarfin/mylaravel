@@ -167,6 +167,7 @@ return [
          */
         Elibyy\TCPDF\ServiceProvider::class,
         Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
+        JorarMarfin\LaravelDspace\LaravelDspaceServiceProvider::class,
         
         /*
          * Application Service Providers...
