@@ -14,12 +14,11 @@ class HomeController extends Controller
         $data = LaravelYoutube::getData('https://www.youtube.com/watch?v=cCwWvAxoQdE');
         dd($data->type);
         return $data;
-        
     }
     public function dspace()
     {
-        $data = LaravelDspace::getData(['verb'=>'ListRecords','set'=>'com_11283_320273','metadataPrefix'=>'etdms']);
-        $data1 = LaravelDspace::Harvest(['set'=>'com_11283_320273']);
+        // $data = LaravelDspace::getData(['verb'=>'ListRecords','set'=>'com_11283_320273','metadataPrefix'=>'etdms']);
+        $data1 = LaravelDspace::Harvest(['set'=>'com_11283_320273','from'=>'2020-02-06','until'=>'2020-02-06']);
         dd($data1);
     }
 }
