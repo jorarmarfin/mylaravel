@@ -3,22 +3,26 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use MiPaquete;
-use LaravelYoutube;
-use LaravelDspace;
 
 class HomeController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
     public function index()
     {
-        $data = LaravelYoutube::getData('https://www.youtube.com/watch?v=cCwWvAxoQdE');
-        dd($data->type);
-        return $data;
-    }
-    public function dspace()
-    {
-        // $data = LaravelDspace::getData(['verb'=>'ListRecords','set'=>'com_11283_320273','metadataPrefix'=>'etdms']);
-        $data1 = LaravelDspace::Harvest(['set'=>'com_11283_320273','from'=>'2020-02-06','until'=>'2020-02-06']);
-        dd($data1);
+        return view('home');
     }
 }

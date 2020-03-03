@@ -16,3 +16,6 @@ Route::get('/', function () {
 });
 Route::get('test', 'HomeController@index');
 Route::get('dspace', 'HomeController@dspace');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
