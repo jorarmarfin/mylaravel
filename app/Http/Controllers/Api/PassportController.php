@@ -11,4 +11,8 @@ class PassportController extends Controller
     {
         return response(['messaje'=>'index']);
     }
+    public function client()
+    {
+        return response(['messaje'=>'Client']);
+    }
 }

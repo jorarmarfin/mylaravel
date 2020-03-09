@@ -19,3 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('test-passport','Api\PassportController@index')->middleware('auth:api');
+Route::get('test-client-token','Api\PassportController@client')->middleware('client');
